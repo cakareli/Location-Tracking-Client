@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3700;
 
  io.on("connection", (socket) => {
      socket.io("position-change", (data) => {
+        //  conosle.log("Opalac: "+data)
          io.emit("position-change", data);
      });
 
